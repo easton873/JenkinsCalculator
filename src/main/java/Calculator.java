@@ -54,7 +54,13 @@ class Calculator {
   if int a = 16 then this method returns: 10000
    */
   String intToBinaryNumber(int n){
-    return null;
+    return Integer.toBinaryString(n);
+//    StringBuilder binary = new StringBuilder();
+//    while (n > 0){
+//      binary.append(n % 2);
+//      n /= 2;
+//    }
+//    return binary.reverse().toString();
   }
 
   /*
@@ -73,7 +79,7 @@ class Calculator {
     }
     StringBuilder newStr = new StringBuilder(n);
     for (int i = 0; i < 32; ++i){
-      newStr.append(alphabet.get(rand.nextInt() % alphabet.size()));
+      newStr.append(alphabet.get(Math.abs(rand.nextInt()) % alphabet.size()));
     }
     return newStr.toString();
   }
