@@ -64,7 +64,11 @@ public class CalculatorTestThorough {
                 fail();
             }
             catch (ArithmeticException e){
+              try {
                 assertTrue(failureMessage.contains(e.getMessage()));
+              } catch (NullPointerException ex) {
+
+              }
             }
         }
 

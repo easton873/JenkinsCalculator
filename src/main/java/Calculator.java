@@ -2,10 +2,12 @@ import java.util.*;
 
 class Calculator {
 
-
+  int[] fibMem = new int[1000];
 
   Calculator(){
-
+    Arrays.fill(fibMem, -1);
+    fibMem[0] = 0;
+    fibMem[1] = 1;
   }
 
   int add(int a , int b){
@@ -42,7 +44,17 @@ class Calculator {
   etc
    */
   int fibonacciNumberFinder(int n){
-    return 0;
+    if (n == 0)
+      return fibMem[0];
+    if (n == 1)
+      return fibMem[1];
+    if (fibMem[n - 2] == -1){
+      fibMem[n - 2] = fibonacciNumberFinder(n - 2);
+    }
+    if (fibMem[n - 1] == -1){
+      fibMem[n - 1] = fibonacciNumberFinder(n - 1);
+    }
+    return fibMem[n - 1] + fibMem[n - 2];
   }
 
 
