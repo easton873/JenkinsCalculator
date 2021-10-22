@@ -10,19 +10,21 @@ public class Main {
     }
   }
 
-  public static int calc(String command, String[] args){
+  public static String calc(String command, String[] args){
     int[] intArgs = convertArgsToInts(args);
     switch (command){
       case "add":
-        return calculator.add(intArgs[1], intArgs[2]);
+        return Integer.toString(calculator.add(intArgs[1], intArgs[2]));
       case "subtract":
-        return calculator.subtract(intArgs[1], intArgs[2]);
+        return Integer.toString(calculator.subtract(intArgs[1], intArgs[2]));
       case "multiply":
-        return calculator.multiply(intArgs[1], intArgs[2]);
+        return Integer.toString(calculator.multiply(intArgs[1], intArgs[2]));
       case "divide":
-        return calculator.divide(intArgs[1], intArgs[2]);
+        return Integer.toString(calculator.divide(intArgs[1], intArgs[2]));
       case "fib":
-        return calculator.fibonacciNumberFinder(intArgs[1]);
+        return Integer.toString(calculator.fibonacciNumberFinder(intArgs[1]));
+      case "binary":
+        return calculator.intToBinaryNumber(intArgs[1]);
       default:
         throw new RuntimeException("Invalid command");
     }
