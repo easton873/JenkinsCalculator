@@ -2,7 +2,7 @@ import java.util.*;
 
 class Calculator {
 
-  int[] fibMem = new int[1000];
+  private int[] fibMem = new int[1000];
 
   Calculator(){
     Arrays.fill(fibMem, -1);
