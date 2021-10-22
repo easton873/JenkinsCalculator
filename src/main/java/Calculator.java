@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Calculator {
+public class Calculator {
 
   private int[] fibMem = new int[1000];
 
