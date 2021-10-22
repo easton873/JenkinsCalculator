@@ -4,25 +4,25 @@ public class Calculator {
 
   private int[] fibMem = new int[1000];
 
-  Calculator(){
+  public Calculator(){
     Arrays.fill(fibMem, -1);
     fibMem[0] = 0;
     fibMem[1] = 1;
   }
 
-  int add(int a , int b){
+  public int add(int a , int b){
     return a + b;
   }
 
-  int subtract(int a , int b){
+  public int subtract(int a , int b){
     return a - b;
   }
 
-  int multiply(int a , int b){
+  public int multiply(int a , int b){
     return a * b;
   }
 
-  int divide(int a , int b){
+  public int divide(int a , int b){
     return a / b;
   }
 
@@ -43,7 +43,7 @@ public class Calculator {
   .
   etc
    */
-  int fibonacciNumberFinder(int n){
+  public int fibonacciNumberFinder(int n){
     if (n == 0)
       return fibMem[0];
     if (n == 1)
@@ -65,7 +65,7 @@ public class Calculator {
   if int a = 10 then this method returns: 1010
   if int a = 16 then this method returns: 10000
    */
-  String intToBinaryNumber(int n){
+  public String intToBinaryNumber(int n){
     return Integer.toBinaryString(n);
 //    StringBuilder binary = new StringBuilder();
 //    while (n > 0){
@@ -83,7 +83,7 @@ public class Calculator {
 
   if you run this function twice with the same String input, it must return 2 unique String IDs
    */
-  String createUniqueID(String n){
+  public String createUniqueID(String n){
     Random rand = new Random();
     List<Character> alphabet = new ArrayList<>();
     for (char letter = 'a'; letter <= 'z'; ++letter){
