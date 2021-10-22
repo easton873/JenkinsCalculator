@@ -2,8 +2,6 @@ import java.util.*;
 
 class Calculator {
 
-  help me colon
-
   int[] fibMem = new int[1000];
 
   Calculator(){
